@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>custom element</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h1>Custom element</h1>
+    <custom-element data-text="Hello world!"></custom-element>
+    <script src="custom-element.js"></script>
+    <script>
+      const customElement = document.getElementsByTagName("custom-element")[0];
+      customElement.setAttribute("data-text", "The world has changed!");
+    </script>
+  </body>
+</html>
