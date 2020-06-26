@@ -3,14 +3,23 @@
   <head>
     <title>custom element</title>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <h1>Custom element</h1>
+    <a href="/">Back</a>
+    <h1>Simple custom element</h1>
     <custom-element data-text="Hello world!"></custom-element>
+    <button onclick="changeInput('The world has changed!')">
+      Change data-text attribute
+    </button>
     <script src="custom-element.js"></script>
     <script>
-      const customElement = document.getElementsByTagName("custom-element")[0];
-      customElement.setAttribute("data-text", "The world has changed!");
+      const changeInput = function (text) {
+        const customElement = document.getElementsByTagName(
+          "custom-element"
+        )[0];
+        customElement.setAttribute("data-text", text);
+      };
     </script>
   </body>
 </html>

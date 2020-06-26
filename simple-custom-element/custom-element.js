@@ -1,9 +1,9 @@
 class CustomElement extends HTMLElement {
   constructor() {
     const self = super();
-    const span = document.createElement("span");
-    span.textContent = this.getAttribute("data-text");
-    this.appendChild(span);
+    const p = document.createElement("p");
+    p.textContent = this.getAttribute("data-text");
+    this.appendChild(p);
     return self;
   }
 
@@ -22,7 +22,7 @@ class CustomElement extends HTMLElement {
   attributeChangedCallback(name, oldValue, newValue) {
     console.log("Custom element attributes changed.");
     if (name === "data-text") {
-      this.getElementsByTagName("span")[0].textContent = newValue;
+      this.getElementsByTagName("p")[0].textContent = newValue;
     }
   }
 
