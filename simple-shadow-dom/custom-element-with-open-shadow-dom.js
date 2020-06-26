@@ -6,10 +6,10 @@ class CustomElementWithOpenShadowDom extends HTMLElement {
     const style = document.createElement("style");
     p.textContent = "I am a custom element with a open shadow dom!";
     style.textContent = `
-        p {
-          color: blue;
-        }
-      `;
+      p {
+        color: blue;
+      }
+    `;
     shadow.appendChild(style);
     shadow.appendChild(p);
     return self;
