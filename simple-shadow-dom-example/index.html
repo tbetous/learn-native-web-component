@@ -22,7 +22,11 @@
     <div class="block">
       <h3>Custom element with open shadow dom</h3>
       <custom-element-with-closed-shadow-dom></custom-element-with-closed-shadow-dom>
-      <button onClick="const result = document.getElementsByTagName('custom-element-with-open-shadow-dom')[0].shadowRoot; document.getElementById('result-1').textContent = result == null ? 'null' : result">Access to shadow root</button>
+      <button
+        onClick="const result = document.getElementsByTagName('custom-element-with-open-shadow-dom')[0].shadowRoot; document.getElementById('result-1').textContent = result == null ? 'null' : result"
+      >
+        Access to shadow root
+      </button>
       <span> => </span>
       <span id="result-1"> </span>
     </div>
@@ -30,7 +34,11 @@
     <div class="block">
       <h3>Custom element with closed shadow dom</h3>
       <custom-element-with-open-shadow-dom></custom-element-with-open-shadow-dom>
-      <button onClick="const result = document.getElementsByTagName('custom-element-with-closed-shadow-dom')[0].shadowRoot; document.getElementById('result-2').textContent = result == null ? 'null' : result">Access to shadow root</button>
+      <button
+        onClick="const result = document.getElementsByTagName('custom-element-with-closed-shadow-dom')[0].shadowRoot; document.getElementById('result-2').textContent = result == null ? 'null' : result"
+      >
+        Access to shadow root
+      </button>
       <span> => </span>
       <span id="result-2"> </span>
     </div>
@@ -47,7 +55,6 @@
         padding: 10px;
         border: 1px solid black;
       }
-    </style>
     </style>
   </body>
 </html>
