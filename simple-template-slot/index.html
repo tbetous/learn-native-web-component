@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>custom element</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <a href="/index.html">Back</a>
+    <h1>Simple template and slots example :</h1>
+
+    <template id="custom-element-template">
+      <article>
+        <h2><slot name="title">TITLE</slot></h2>
+        <p><slot name="paragraph">PARAGRAPH</slot></p>
+      </article>
+    </template>
+
+    <custom-article>
+      <span slot="title">Hello World !</span>
+      <span slot="paragraph"
+        >This is an example with a template and slots.</span
+      >
+    </custom-article>
+
+    <script src="custom-article.js"></script>
+  </body>
+</html>

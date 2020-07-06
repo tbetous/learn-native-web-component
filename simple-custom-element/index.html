@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>custom element</title>
+    <title>Native web component sandbox - Simple custom element</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <a href="/index.html">Back</a>
-    <h1>Simple custom element</h1>
+    <h1>Simple custom element :</h1>
     <custom-element data-text="Hello world!"></custom-element>
     <button onclick="changeInput('The world has changed!')">
       Change data-text attribute
     </button>
+    <button onclick="removeComponent()">Remove component</button>
     <script src="custom-element.js"></script>
     <script>
+      const removeComponent = function () {
+        const customElement = document.getElementsByTagName(
+          "custom-element"
+        )[0];
+        if (customElement) {
+          document.body.removeChild(customElement);
+        }
+      };
       const changeInput = function (text) {
         const customElement = document.getElementsByTagName(
           "custom-element"
         )[0];
-        customElement.setAttribute("data-text", text);
+        if (customElement) {
+          customElement.setAttribute("data-text", text);
+        }
       };
     </script>
   </body>
