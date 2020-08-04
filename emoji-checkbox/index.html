@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Native web component sandbox - Emoji checkbox</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div>
+      <a href="/index.html" tabindex="0">Back</a>
+    </div>
+    <h1>Emoji checkbox :</h1>
+    <div>
+      <emoji-checkbox
+        aria-labelledby="are-you-awesome-checkbox"
+      ></emoji-checkbox>
+      <label id="are-you-awesome-checkbox">Are you awesome ?</label>
+    </div>
+    <div>
+      <emoji-checkbox
+        aria-labelledby="are-you-disabled-checkbox"
+        checked
+        disabled
+      ></emoji-checkbox>
+      <label id="are-you-disabled-checkbox">Are you hidden ?</label>
+    </div>
+    <script src="emoji-checkbox.js"></script>
+    <style>
+      div {
+        display: flex;
+        align-items: center;
+        margin: 10px;
+      }
+      label {
+        margin-left: 5px;
+      }
+    </style>
+  </body>
+</html>
