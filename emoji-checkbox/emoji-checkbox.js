@@ -69,21 +69,24 @@ class EmojiCheckbox extends HTMLElement {
   }
 
   connectedCallback() {
+    this._upgradeProperty("checked");
+    this._upgradeProperty("disabled");
     if (!this.hasAttribute("role")) {
       this.setAttribute("role", "checkbox");
     }
     if (!this.hasAttribute("tabindex")) {
       this.setAttribute("tabindex", 0);
     }
+    if (!this.hasAttribute("checked")) {
+      this.setAttribute("aria-checked", false);
+    }
     this._defaultTabIndex = this.hasAttribute("tabindex")
       ? this.getAttribute("tabindex")
       : 0;
-    this._upgradeProperty("checked");
-    this._upgradeProperty("disabled");
-    this._processCheck();
-    this._processDisable();
     this.addEventListener("click", this._onClick);
     this.addEventListener("keyup", this._onKeyUp);
+    this._processCheck();
+    this._processDisable();
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
