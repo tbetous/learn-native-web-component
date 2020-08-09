@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Native web component sandbox - Emoji checkbox</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <a href="/index.html">Back</a>
+    <h1>Tabs :</h1>
+
+    <x-tabs>
+      <x-tab slot="tabs">Tab 1</x-tab>
+      <x-panel slot="panels"
+        >This is the tab 1 content <a href="google.com">Test</a>!</x-panel
+      >
+      <x-tab slot="tabs">Tab 2</x-tab>
+      <x-panel slot="panels">This is the tab 2 content !</x-panel>
+      <x-tab id="awesome-tab" slot="tabs">Tab 3</x-tab>
+      <x-panel id="awesome-panel" slot="panels"
+        >This is the tab 3 content !</x-panel
+      >
+    </x-tabs>
+    <script src="x-tabs.js"></script>
+    <style>
+      div {
+        display: flex;
+        align-items: center;
+        margin: 10px;
+      }
+      label {
+        margin-left: 5px;
+      }
+    </style>
+  </body>
+</html>
