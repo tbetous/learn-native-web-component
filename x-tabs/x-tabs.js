@@ -129,6 +129,12 @@ class Tabs extends HTMLElement {
   }
 
   _onKeydown(event) {
+    // If your focus is in the panel you don't need to do an action.
+    if (event.target.getAttribute("role") !== "tab") return;
+
+    // Used by assistive technology.
+    if (event.altKey) return;
+
     switch (event.keyCode) {
       case KEYCODE.HOME:
         this._selectTab(this._getFirstTab());
